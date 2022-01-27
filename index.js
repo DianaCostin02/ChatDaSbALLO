@@ -4,7 +4,7 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-var nClien=0;//perche se no conta ancheil terminale da cui controllo alias il server
+var nClien=0;//per contare il numero di client connessi
 /*
 app.get('/', (req, res) => {
   res.send('<h1>sciao bello</h1>');
