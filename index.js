@@ -14,13 +14,12 @@ app.get('/', (req, res) => {
   });
 
   io.on('connection', (socket) => {
-    let IeP =socket.remoteAdress+" "+socket.remotePort
-    console.log(" client con indirizzo e porta: "+IeP+" connesso");
-    socket.write("server il ascolto sulla porta 7979 by Costin\r\n");
-    nClien++;;
+    
+    console.log(" user connesso");
+       nClien++;;
     console.log('user connessi: '+nClien);
     socket.on('disconnect', () => {
-      console.log('user disconnected');
+      console.log('user disconesso');
       nClien--;
       console.log('user connessi: '+nClien);
     });
