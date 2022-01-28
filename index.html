@@ -86,7 +86,7 @@
   
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      if (input.value && nickname.value) {
+      if (input.value!="" && nickname.value!="") {
         socket.emit('chat message', nickname.value+": "+input.value);
         input.value = '';
       }
